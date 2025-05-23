@@ -1,10 +1,10 @@
-<!-- Sructured outline for domain model -->
+Sructured outline for domain model
 
 1. class Customer
 
 Attributes: customer_id, name, phone_no, email_address, order_method, loyalty_status
 
-<!-- Methods -->
+Methods
 
 get_customer_info() -> Return a summary of the customers information -> (First get the customers information)
 
@@ -24,7 +24,7 @@ Name(Capuccino, Expresso, Americano),
 Type(cold, brewed, ), 
 price, size_options(small, medium, large)
 
-<!-- Methods -->
+Methods
 
 get_coffee_info() -> Returns all info of the coffee
 
@@ -47,7 +47,7 @@ update_price(new_price) -> Updates the price of the coffee
  total_price -> Total price of the order
  order_status -> Status of the order(pending // completed)
 
-<!-- Methods -->
+Methods
 
 get_order_info() -> Returns the summary of the order details
 
@@ -60,9 +60,9 @@ get_customer_id() -> Returns the customer ID associated with the order
 update_status(new_status) -> Example from pending to completed
 
 
-<!-- Relationships -->
+Relationships
 
-<!-- one-to-Many -->
+One-to-Many
 
 Customer and order
 
@@ -70,11 +70,11 @@ coffee and sizes
 
 order to order status
 
-<!-- many-to-many -->
+Many-to-Many
 
 order and coffe -> mutiple orders and several coffee
 
-<!-- One-to-One -->
+One-to-One
 
 Customer to loyalty status
 
