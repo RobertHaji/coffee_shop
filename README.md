@@ -60,8 +60,22 @@ get_customer_id() -> Returns the customer ID associated with the order
 update_status(new_status) -> Example from pending to completed
 
 
+<!-- Relationships -->
 
+<!-- one-to-Many -->
 
+Customer and order
 
+coffee and sizes
+
+order to order status
+
+<!-- many-to-many -->
+
+order and coffe -> mutiple orders and several coffee
+
+<!-- One-to-One -->
+
+Customer to loyalty status
 
 
