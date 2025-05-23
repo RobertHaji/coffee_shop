@@ -8,9 +8,11 @@ class Coffee:
         return self._name 
     # Use the property setter
 
+    @name.setter
+
     def name (self, value):
         if isinstance (value, str) and len(value) >= 3:
-            self.name = value
+            self._name = value
         else:
             raise ValueError ("Name must be the value of string atleast above 3")
         
@@ -19,6 +21,8 @@ class Coffee:
 
 # print(coffee.name)
 
-# coffee = Coffee("C")
+# coffee = Coffee("Ca")
+
+# print(coffee.name)
     
    
