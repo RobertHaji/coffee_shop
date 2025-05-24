@@ -45,10 +45,12 @@ class Order:
          else:
             raise ValueError("Price must be a float between 1.0 and 10.0")
          
-customer =  Customer("Robert")
-coffee = Coffee("Expresso") 
-order = Order(customer, coffee, 5) 
-print(f"{order.customer.name} has ordered {order.coffee.name} for {order.price}")         
+# Debuggine
+         
+# customer =  Customer("Robert")
+# coffee = Coffee("Expresso") 
+# order = Order(customer, coffee, 5) 
+# print(f"{order.customer.name} has ordered {order.coffee.name} for {order.price}")         
          
     
    
