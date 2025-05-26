@@ -1,11 +1,13 @@
 
 class Order:
+     all = [] #This tracks all order instances
      def __init__(self, customer, coffee, price):
       from customer import Customer
       from coffee import Coffee
       self.customer = customer
       self.coffee = coffee
       self.price = price
+      Order.all.append(self) #Stores the instance
 
     #   Getter for the customer
 
@@ -47,8 +49,8 @@ class Order:
          else:
             raise ValueError("Price must be a float between 1.0 and 10.0")
          
-       
-         
+     def __repr__(self):
+         return f"<Order customer={self.customer.name}, coffee={self.coffee.name}, price={self.price}>" 
     
    
     

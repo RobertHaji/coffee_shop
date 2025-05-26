@@ -1,3 +1,4 @@
+from order import Order
 class Customer:
     def __init__(self, name):
       self.name = name
@@ -16,6 +17,13 @@ class Customer:
         self._name = value
       else:
         raise ValueError("Name must be the value of string between 1 and 15 characters") 
+    def orders(self):
+       return [order for order in Order.all_orders if order.customer == self]
+
+    def coffees(self):
+       unique_coffees = {order.coffee for order in self.orders()}
+       return list(unique_coffees)
+         
    
 #    Debugging and testing
 # customer = Customer("Robert Haji")
