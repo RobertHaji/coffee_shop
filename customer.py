@@ -22,9 +22,9 @@ class Customer:
 
 # print(customer.name)
 
-# customer.name = ("VeryLongNameRobertHaji")
+# # customer.name = ("VeryLongNameRobertHaji")
 
-# print(customer.name)
+# # print(customer.name)
 
 
 

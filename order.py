@@ -1,8 +1,8 @@
-from customer import Customer
-from coffee import Coffee
 
 class Order:
      def __init__(self, customer, coffee, price):
+      from customer import Customer
+      from coffee import Coffee
       self.customer = customer
       self.coffee = coffee
       self.price = price
@@ -16,10 +16,11 @@ class Order:
 
       @customer.setter
       def customer(self, value):
+         from customer import Customer
          if isinstance (value, Customer):
             self._customer = value
          else:
-            raise ValueError("Customer must be a valid Cutomer instance")
+            raise ValueError("Customer must be a valid Customer instance")
     #   Getter for the coffee
       @property
       def coffee(self):
@@ -27,6 +28,7 @@ class Order:
     #   Setter for the coffee 
       @coffee.setter
       def coffee(self, value):
+         from coffee import Coffee
          if isinstance (value, Coffee):
             self._coffee = value
          else:
@@ -45,12 +47,7 @@ class Order:
          else:
             raise ValueError("Price must be a float between 1.0 and 10.0")
          
-# Debuggine
-         
-# customer =  Customer("Robert")
-# coffee = Coffee("Expresso") 
-# order = Order(customer, coffee, 5) 
-# print(f"{order.customer.name} has ordered {order.coffee.name} for {order.price}")         
+       
          
     
    

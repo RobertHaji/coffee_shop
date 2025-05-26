@@ -1,5 +1,3 @@
-from order import Order #Imports order class to manage orders for this coffee
-from customer import Customer # Imports customer class to associate customers with so called orders
 
 class Coffee:
     def __init__(self, name):
@@ -22,6 +20,7 @@ class Coffee:
         
     #   The function adds an order instance to the coffee order lists 
     def add_orders(self, order):
+        from order import Order
         if isinstance(order, Order): #Checks whether the provided order is a valid Order instance
             self._orders.append(order) #Adds the order to the list
         else:
@@ -43,11 +42,3 @@ class Coffee:
 # coffee = Coffee("Ca")
 
 # print(coffee.name)
-    
-customer1 = Customer("Robert")
-customer2 = Customer("Angel-Face")
-coffee = Coffee("Latte")
-
-
-order1 = Order(customer1, coffee, 5.0)
-order2 = Order(customer2, coffee, 4.0)   
