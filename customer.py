@@ -23,6 +23,10 @@ class Customer:
     def coffees(self):
        unique_coffees = {order.coffee for order in self.orders()}
        return list(unique_coffees)
+    def create_orders(self, coffee, price):
+       order = Order(self, coffee, price)
+       coffee.add_order(order) #Associate the order with the coffee
+       return order
          
    
 #    Debugging and testing
