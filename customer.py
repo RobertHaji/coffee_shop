@@ -27,6 +27,25 @@ class Customer:
        order = Order(self, coffee, price)
        coffee.add_orders(order) #Associate the order with the coffee
        return order
+    
+    @classmethod
+
+    def most_aficionado(cls, coffee):
+       coffee_orders = [order for order in Order.all if order.coffee == coffee]
+
+       #Create a dictionary to track the spending per each cutomer
+
+       customer_spending = {}
+       for order in coffee_orders:
+          customer = order.customer
+          # Update the spending
+          customer_spending[customer] = customer_spending.get(customer, 0) + order.price
+
+       if not customer_spending:
+          return None # Means that no customer for the provided coffee
+
+       most_spent_customer = max(customer_spending, key=customer_spending.get)
+       return most_spent_customer   
          
    
 #    Debugging and testing
