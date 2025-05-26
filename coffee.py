@@ -31,6 +31,15 @@ class Coffee:
     def customers(self):
         unique_customers = {order.customer for order in self._orders}
         return list(unique_customers)      #Returns the unique customers as a list  
+    def num_orders(self):
+        return len(self._orders)  #Returns the total num of orders for this coffee
+    
+    def average_price(self):
+        if not self._orders:
+            return 0.0 #This avoids division by 0 if there are no orders
+        total_price = sum(order.price for order in self._orders)
+        return total_price/len(self._orders) #Calculate the average price
+
 
 
         

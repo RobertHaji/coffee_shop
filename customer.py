@@ -25,7 +25,7 @@ class Customer:
        return list(unique_coffees)
     def create_orders(self, coffee, price):
        order = Order(self, coffee, price)
-       coffee.add_order(order) #Associate the order with the coffee
+       coffee.add_orders(order) #Associate the order with the coffee
        return order
          
    
